@@ -57,3 +57,9 @@ padding-top: 10px;
   background-image: url(sqimg.png);
   height: 600px;
 }
+.inpo{
+  color: white;
+  font-family: 'Sawarabi Mincho', sans-serif;
+  font-size: 25px;
+  padding-top: 50px;
+}

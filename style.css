@@ -68,3 +68,7 @@ padding-top: 10px;
   border-bottom: 1px solid #FFF;
   color: #FFF;
 }
+.twobord{
+  position: relative;
+    border-top: 5px solid #FFF;
+}

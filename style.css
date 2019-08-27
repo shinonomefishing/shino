@@ -72,3 +72,7 @@ padding-top: 10px;
   position: relative;
     border-top: 5px solid #FFF;
 }
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+.align-justify { text-align: justify; }

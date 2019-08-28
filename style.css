@@ -32,6 +32,12 @@ a:hover {text-decoration: none; color: red;}
   padding: 0px;
   background-color: #FFF;
 }
+#maincontainer{
+  position: relative;
+  margin: auto;
+  max-width: 1200px;
+  padding: 0px;
+}
 .header{
 background-color: black;
 margin-top: 20px;

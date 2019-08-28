@@ -27,9 +27,10 @@ a:active {text-decoration: none; color: #FFF;}
 a:hover {text-decoration: none; color: red;}
 .container{
   position: relative;
-  margin: auto;
+  margin: 20px 0 0 0;
   max-width: 1200px;
   padding: 0px;
+  background-color: #FFF;
 }
 .header{
 background-color: black;
@@ -66,8 +67,8 @@ padding-top: 10px;
 }
 .probord{
   margin-top: 50px;
-  border-bottom: 1px solid #FFF;
-  color: #FFF;
+  border-bottom: 1px solid #000000;
+  color: #000000;
 }
 .twobord{
   position: relative;

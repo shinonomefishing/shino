@@ -27,16 +27,16 @@ a:active {text-decoration: none; color: #FFF;}
 a:hover {text-decoration: none; color: red;}
 .container{
   position: relative;
+  margin: auto;
+  max-width: 1200px;
+  padding: 0px;
+}
+#maincontainer{
+  position: relative;
   margin: 20px 0 0 0;
   max-width: 1200px;
   padding: 0px;
   background-color: #FFF;
-}
-#maincontainer{
-  position: relative;
-  margin: auto;
-  max-width: 1200px;
-  padding: 0px;
 }
 .header{
 background-color: black;

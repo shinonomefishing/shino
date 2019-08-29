@@ -13,11 +13,15 @@
       width: 500px;
       height: 400px;
       background: url(https://imgur.com/Rv9KFYR.png);
-      font-family: 'noto serif jp', serif;
       margin-top: 20px;
       font-size: 60px;
       border: 3px solid red;
       position: absolute;
+    }
+    #num{
+      margin: 50px 0 0 0;
+      font-size: 60px;
+      color:black;
     }
     .bg{
       background-color: #FFF;
@@ -35,11 +39,14 @@
   <script>
     var i = 0;
     var sutte = ['https://imgur.com/Rv9KFYR.png','https://imgur.com/V3BgW71.png','https://imgur.com/O8hkL65.png','https://imgur.com/4Ns6DJb.png','https://imgur.com/OOAUJfG.png','https://imgur.com/ROwgD7c.png','https://imgur.com/DQGVuJF.png'];
+    var suttenum = ['T01','T02','T03','T04','T05','T06','T07'];
     function click2(name){
       i = name
       var obj = document.getElementById('a');
       var url = "url(" + sutte[i] + ")";
       obj.style.background = url;
+      var objnum = document.getElementById('num').innerHTML;
+      objnum.textContect=suttenum[i];
     }
   </script>
 </head>
@@ -72,7 +79,7 @@
 <div class="twobord bord align-center"><h1>PRODUCT</h1></div>
   <div class="container">
 
-    <div id="a"><img src="https://imgur.com/shLxWE6.png" style="padding: 50px 0 0 20px;"></div><div style="width: 500px; height: 400px; background-color: #FFF; margin: 20px 0 0 600px; display: inline-block;"><div style="width:420px; height:100px; margin: 30px 0 0 40px; font-size: 50px;">Shigure Sutte</div><div style="width:420px; height: 50px; border-top: 2px solid #000000; border-bottom: 2px solid #000000; margin-left: 30px; line-height: 30px;"><span style="line-height: 15px;">販売価格(税別)</span><span style="font-size: 40px; font-weight: 900; margin: 0px 0 0 50px;">¥600<span></div></div>
+    <div id="a"><img src="https://imgur.com/shLxWE6.png" style="padding: 50px 0 0 20px;"></div><div style="width: 500px; height: 400px; background-color: #FFF; margin: 20px 0 0 600px; display: inline-block;"><div style="width:420px; height:100px; margin: 30px 0 0 40px; font-size: 50px; font-family: 'Oswald', sans-serif;">Shigure Sutte</div><div style="width:420px; height: 50px; border-top: 2px solid #000000; border-bottom: 2px solid #000000; margin-left: 30px; line-height: 30px;"><span style="line-height: 15px;">販売価格(税別)</span><span style="font-size: 40px; font-weight: 900; margin: 0px 0 0 50px;">¥600</span><div id="num">T01</div></div></div>
     <div style="margin-top: 50px;">
       <div style="border-bottom: 2px solid #FFF; display: block; color: #FFF; margin-top: 10px;">PRODUCT KINDS (CLICK IMAGE)</div>
     <div class="bg"><input type="image" src="https://imgur.com/ZB9c8wM.jpg" onclick="click2(0)"></div>
@@ -92,30 +99,30 @@
   <div style="background-color: white">
     <h2 class="probord">PRODUCT DETAILS</h2>
   </div>
-  <div style="width: auto; height: 400px; background-image: url(https://imgur.com/uOWMsCM.png); padding:30px 0 0 50px;"><div style="margin: 0 40px 100px 600px; font-family: 'Noto Serif JP', serif;"><h2 style="color: #000000; font-size:35px;">【より効果的な音を求め！】</h2><p>
+  <div style="width: auto; height: 400px; background-image: url(https://imgur.com/uOWMsCM.png); padding:30px 0 0 50px;"><div style="margin: 0 40px 100px 650px; font-family: 'Noto Serif JP', serif;"><h2 style="color: #000000; font-size:35px;">【より効果的な音を求め！】</h2><p>
 
 イカの可聴領域のなかで、最も聴き取りやすい周波数の音が出やすい材料をラトルとして使いました。スッテとしての基本性能にプラスされた効果的なラトル音が、好奇心の高い高活性イカを寄せる強力な武器になります。</div></div>
-<div style="width: auto; height: 400px; background-image: url(https://imgur.com/1Dh0pQr.png); color:#FFF; font-family: 'Noto Serif JP', serif;"><h2 style="color: #FFF; font-size:40px;">【水平バランスとは？】</h2>
+<div style="width: auto; height: 400px; background-image: url(https://imgur.com/1Dh0pQr.png); color:#FFF; font-family: 'Noto Serif JP', serif; "><div style="margin: 30px 0 0 650px; padding: 10px 0 0 50px;"><h2 style="color: #FFF; font-size:40px;">【水平バランスとは？】</h2>
 
-本体内部にウエイトを収納しているため、餌となる小魚やエビの海中姿勢ながらの水平姿勢で、自然にイカを誘います
+本体内部にウエイトを収納しているため、<br>餌となる小魚やエビの海中姿勢ながらの水平姿勢で、<br>自然にイカを誘います</div>
 </div>
-<div style="width: auto; height: 400px; background-image: url(https://imgur.com/sPtBl8v.png); font-family: 'Noto Serif JP', serif;"><div style="margin: 0 50px 100px 700px;"><h2 style="color: #FFF; font-size:40px;">【プレミアムカラーラインナップ】</h2><p>
+<div style="width: auto; height: 400px; background-image: url(https://imgur.com/sPtBl8v.png); font-family: 'Noto Serif JP', serif;"><div style="margin: 30px 50px 100px 550px; padding-top: 30px; "><h2 style="color: #FFF; font-size:35px;">【プレミアムカラーラインナップ】</h2><p>
 
-<h3 style="color: #FFF;">実績が証明する夜光本体と、ナチュラルで選び易いカラーまで。
+<div style="color: #FFF;">実績が証明する夜光本体と、ナチュラルで選び易いカラーまで。
 濁りの中、まづめ時、ローライトの中でも夜光の発光でアピール。
-高級で様々なカラーパターンで、状況に応じたセレクトが可能です</h3></div></div>
-<div style="width: auto; height: 400px; background-image: url(https://imgur.com/3VRxuQZ.png); font-family: 'Noto Serif JP', serif;"><h2 style="font-size:40px;">【70㎜サイズ】</h2><p>
+高級で様々なカラーパターンで、状況に応じたセレクトが可能です</div></div></div>
+<div style="width: auto; height: 400px; background-image: url(https://imgur.com/3VRxuQZ.png); font-family: 'Noto Serif JP', serif; padding:  30px 0 0 30px; margin-top: 30px;"><h2 style="font-size:40px;">【70㎜サイズ】</h2><p>
 
 小型のヤリ、ケンサキ～乗り渋りのパラソルクラスまで対応する70㎜サイズ<br>（エギ1.8号、浮スッテ2.5号相当）。</div>
-<div style="width: auto; height: 400px; background-image: url(https://imgur.com/iAnSUJ2.png); font-family: 'Noto Serif JP', serif;"><h2 style="font-size:40px;">【イカの掛かりを重視した鋭い針】</h2><p>
+<div style="width: auto; height: 400px; background-image: url(https://imgur.com/iAnSUJ2.png); font-family: 'Noto Serif JP', serif;"><div style="padding:  200px 0 0 500px; margin-top: 30px;"><h2 style="font-size:40px;">【イカの掛かりを重視した鋭い針】</h2><p>
 
 触れただけで掛かる！そして耐久性にもこだわった高級針を使用。<br>
-強度と刺さりやすさを考慮し、刺さってからはバレにくい丸曲げを採用。</div>
+強度と刺さりやすさを考慮し、刺さってからはバレにくい丸曲げを採用。</div></div>
   </div>
-  <div style="width: auto; height: 400px; background-image: url(https://imgur.com/kzUuyky.png); font-family: 'Noto Serif JP', serif;"><h2 style="font-size:40px;">【イカの掛かりを重視した鋭い針】</h2><p>
+  <div style="width: auto; height: 400px; background-image: url(https://imgur.com/kzUuyky.png); font-family: 'Noto Serif JP', serif; color: #FFF;"><div style="padding:  30px 0 0 500px; margin-top: 30px;"><h2 style="font-size:40px;">【イカの掛かりを重視した鋭い針】</h2><p>
 
   触れただけで掛かる！そして耐久性にもこだわった高級針を使用。<br>
-  強度と刺さりやすさを考慮し、刺さってからはバレにくい丸曲げを採用。</div>
+  強度と刺さりやすさを考慮し、刺さってからはバレにくい丸曲げを採用。</div></div>
     </div>
 </div>
   </body>

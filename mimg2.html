@@ -29,13 +29,13 @@
     }
     .bg{
       background-color: #FFF;
-      margin-top: 10px;
+      margin: 10px 0 0 10px;
       display: inline-block;
       border: 3px solid pink;
     }
     .bg1{
       background-color: #000000;
-      margin-top: 10px;
+      margin: 10px 0 0 10px;
       display: inline-block;
       border: 3px solid pink;
     }
@@ -44,13 +44,74 @@
     var i = 0;
     var sutte = ['https://imgur.com/Rv9KFYR.png','https://imgur.com/V3BgW71.png','https://imgur.com/O8hkL65.png','https://imgur.com/4Ns6DJb.png','https://imgur.com/OOAUJfG.png','https://imgur.com/ROwgD7c.png','https://imgur.com/DQGVuJF.png'];
     var suttenum = ['T01','T02','T03','T04','T05','T06','T07'];
+    var basicstn = ['https://imgur.com/ZB9c8wM.jpg','https://imgur.com/OXeULm7.png','https://imgur.com/KPywzh9.png','https://imgur.com/3fIsOJL.png','https://imgur.com/PRxJFID.png','https://imgur.com/6JXARR1.png','https://imgur.com/5SHSztN.png','https://imgur.com/6JXARR1.png'];
+    var basicglow = ['https://imgur.com/rTjocPF.png','https://imgur.com/j2rDSAO.png','https://imgur.com/JSJ5vOY.png','https://imgur.com/UzCEYj3.png','https://imgur.com/RHNAG2m.png','https://imgur.com/zfg42ok.png','https://imgur.com/q7cuFvK.png'];
+    var snum;
     function click2(name){
-      i = name
+      i = name;
       var obj = document.getElementById('a');
       var url = "url(" + sutte[i] + ")";
       obj.style.background = url;
       var objnum = document.getElementById('num').innerHTML=suttenum[i];
     }
+    function click3(name){
+      i = name;
+      var obj = document.getElementById('a');
+      var url = "url(" + shalimg[i] + ")";
+      obj.style.background = url;
+      var objnum = document.getElementById('shal').innerHTML=shal[i];
+    }
+    function sex(){
+    var jbBtn = document.createElement( 'button' );
+    var jbBtnText = document.createTextNode( 'Click' );
+    jbBtn.appendChild( jbBtnText );
+    document.getElementById('bgh').appendChild(jbBtn);
+  }
+  function addnight(){
+    if( snum == 0){
+      for(var i = 0; i < basicglow.length; i++){
+        var jbBtn = document.createElement( 'div' );
+        jbBtn.className = "bg1";
+        var div1 = '<input type="image"  src=' + basicglow[i] + ' onclick="click2(' + i + ')">';
+        jbBtn.innerHTML = div1;
+        document.getElementById('bgh').appendChild(jbBtn);
+      }
+      snum = 1;
+    }else{
+      removesum();
+      for(var i = 0; i < basicglow.length; i++){
+        var jbBtn = document.createElement( 'div' );
+        jbBtn.className = "bg1";
+        var div1 = '<input type="image"  src=' + basicglow[i] + ' onclick="click2(' + i + ')">';
+        jbBtn.innerHTML = div1;
+        document.getElementById('bgh').appendChild(jbBtn);
+    }
+  }
+}
+function addday(){
+  if( snum == 0){
+    for(var i = 0; i < basicglow.length; i++){
+      var jbBtn = document.createElement( 'div' );
+      jbBtn.className = "bg";
+      var div1 = '<input type="image"  src=' + basicstn[i] + ' onclick="click2(' + i + ')">';
+      jbBtn.innerHTML = div1;
+      document.getElementById('bgh').appendChild(jbBtn);
+    }
+    snum = 1;
+  }else{
+    removesum();
+    for(var i = 0; i < basicglow.length; i++){
+      var jbBtn = document.createElement( 'div' );
+      jbBtn.className = "bg";
+      var div1 = '<input type="image"  src=' + basicstn[i] + ' onclick="click2(' + i + ')">';
+      jbBtn.innerHTML = div1;
+      document.getElementById('bgh').appendChild(jbBtn);
+  }
+}
+}
+  function removesum(){
+    document.getElementById('bgh').innerHTML = "";
+}
   </script>
 </head>
 <body>
@@ -80,6 +141,10 @@
   </nav>
 </div>
 <div class="twobord bord align-center"><h1>PRODUCT</h1></div>
+<div style="width:106px; height:70px; position:absolute; margin: 504px 0 0 150px;">
+  <input type="image" src="https://imgur.com/LmyzfI6.png" style="width:50px; height: 70px;" onclick="addday()">
+  <input type="image" src="https://imgur.com/ytmT5JY.png" style="width:50px; height: 70px;" onclick="addnight()">
+</div>
   <div class="container">
 
     <div id="a"><img src="https://imgur.com/shLxWE6.png" style="padding: 50px 0 0 20px;"></div>
@@ -93,20 +158,7 @@
     </div>
     <div style="margin-top: 50px;">
       <div style="border-bottom: 2px solid #FFF; display: block; color: #FFF; margin-top: 10px;">PRODUCT KINDS (CLICK IMAGE)</div>
-    <div class="bg"><input type="image" src="https://imgur.com/ZB9c8wM.jpg" onclick="click2(0)"></div>
-    <div class="bg"><input type="image" src="https://imgur.com/OXeULm7.png" onclick="click2(1)"></div>
-    <div class="bg"><input type="image" src="https://imgur.com/KPywzh9.png" onclick="click2(2)"></div>
-    <div class="bg"><input type="image" src="https://imgur.com/3fIsOJL.png" onclick="click2(3)"></div>
-    <div class="bg"><input type="image" src="https://imgur.com/PRxJFID.png" onclick="click2(4)"></div>
-    <div class="bg"><input type="image" src="https://imgur.com/6JXARR1.png" onclick="click2(5)"></div>
-    <div class="bg"><input type="image" src="https://imgur.com/5SHSztN.png" onclick="click2(6)"></div>
-    <div class="bg1"><img src="https://imgur.com/rTjocPF.png"></div>
-    <div class="bg1"><img src="https://imgur.com/j2rDSAO.png"></div>
-    <div class="bg1"><img src="https://imgur.com/JSJ5vOY.png"></div>
-    <div class="bg1"><img src="https://imgur.com/UzCEYj3.png"></div>
-    <div class="bg1"><img src="https://imgur.com/RHNAG2m.png"></div>
-    <div class="bg1"><img src="https://imgur.com/zfg42ok.png"></div>
-    <div class="bg1"><img src="https://imgur.com/q7cuFvK.png"></div>
+          <div id="bgh"></div>
   <div style="background-color: white">
     <h2 class="probord">PRODUCT DETAILS</h2>
   </div>
@@ -136,5 +188,8 @@
   </div></div>
 </div>
 </div>
+<script>
+addday();
+</script>
   </body>
 </html>

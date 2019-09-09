@@ -43,6 +43,7 @@
   <script>
     var i = 0;
     var sutte = ['https://imgur.com/Rv9KFYR.png','https://imgur.com/V3BgW71.png','https://imgur.com/O8hkL65.png','https://imgur.com/4Ns6DJb.png','https://imgur.com/OOAUJfG.png','https://imgur.com/ROwgD7c.png','https://imgur.com/DQGVuJF.png'];
+    var sutte_glow = ['https://imgur.com/kyMdJKF.png','https://imgur.com/ck0AhdX.png','https://imgur.com/JHeMr4m.png','https://imgur.com/O42iuqg.png','https://imgur.com/EhCnAj7.png','https://imgur.com/QpB9hrS.png','https://imgur.com/tvCYkHu.png'];
     var suttenum = ['T01','T02','T03','T04','T05','T06','T07'];
     var basicstn = ['https://imgur.com/ZB9c8wM.jpg','https://imgur.com/OXeULm7.png','https://imgur.com/KPywzh9.png','https://imgur.com/3fIsOJL.png','https://imgur.com/PRxJFID.png','https://imgur.com/6JXARR1.png','https://imgur.com/5SHSztN.png','https://imgur.com/6JXARR1.png'];
     var basicglow = ['https://imgur.com/rTjocPF.png','https://imgur.com/j2rDSAO.png','https://imgur.com/JSJ5vOY.png','https://imgur.com/UzCEYj3.png','https://imgur.com/RHNAG2m.png','https://imgur.com/zfg42ok.png','https://imgur.com/q7cuFvK.png'];
@@ -57,22 +58,16 @@
     function click3(name){
       i = name;
       var obj = document.getElementById('a');
-      var url = "url(" + shalimg[i] + ")";
+      var url = "url(" + sutte_glow[i] + ")";
       obj.style.background = url;
-      var objnum = document.getElementById('shal').innerHTML=shal[i];
+      var objnum = document.getElementById('num').innerHTML=suttenum[i];
     }
-    function sex(){
-    var jbBtn = document.createElement( 'button' );
-    var jbBtnText = document.createTextNode( 'Click' );
-    jbBtn.appendChild( jbBtnText );
-    document.getElementById('bgh').appendChild(jbBtn);
-  }
   function addnight(){
     if( snum == 0){
       for(var i = 0; i < basicglow.length; i++){
         var jbBtn = document.createElement( 'div' );
         jbBtn.className = "bg1";
-        var div1 = '<input type="image"  src=' + basicglow[i] + ' onclick="click2(' + i + ')">';
+        var div1 = '<input type="image"  src=' + basicglow[i] + ' onclick="click3(' + i + ')">';
         jbBtn.innerHTML = div1;
         document.getElementById('bgh').appendChild(jbBtn);
       }
@@ -82,7 +77,7 @@
       for(var i = 0; i < basicglow.length; i++){
         var jbBtn = document.createElement( 'div' );
         jbBtn.className = "bg1";
-        var div1 = '<input type="image"  src=' + basicglow[i] + ' onclick="click2(' + i + ')">';
+        var div1 = '<input type="image"  src=' + basicglow[i] + ' onclick="click3(' + i + ')">';
         jbBtn.innerHTML = div1;
         document.getElementById('bgh').appendChild(jbBtn);
     }
@@ -167,13 +162,13 @@ function addday(){
 イカの可聴領域のなかで、最も聴き取りやすい周波数の音が出やすい材料をラトルとして使いました。スッテとしての基本性能にプラスされた効果的なラトル音が、好奇心の高い高活性イカを寄せる強力な武器になります。</div></div>
 
 <div style="width: auto; height: 400px; background-image: url(https://imgur.com/1Dh0pQr.png); color:#FFF; font-family: 'Noto Serif JP', serif; "><div style="margin: 30px 0 0 650px; padding: 10px 0 0 50px;"><h2 style="color: #FFF; font-size:40px;">【水平バランスとは？】</h2>
-本体内部にウエイトを収納しているため、<br>餌となる小魚やエビの海中姿勢ながらの水平姿勢で、<br>自然にイカを誘います。</div>
+本体内部にウエイトを収納しているため、<br>餌となる小魚やエビの海中姿勢ながらの水平姿勢で、<br>自然にイカを誘います</div>
 </div>
 
 <div style="width: auto; height: 400px; background-image: url(https://imgur.com/sPtBl8v.png); font-family: 'Noto Serif JP', serif;"><div style="margin: 30px 50px 100px 550px; padding-top: 30px; "><h2 style="color: #FFF; font-size:35px;">【プレミアムカラーラインナップ】</h2><p>
 <div style="color: #FFF;">実績が証明する夜光本体と、ナチュラルで選び易いカラーまで。
 濁りの中、まづめ時、ローライトの中でも夜光の発光でアピール。
-高級で様々なカラーパターンで、状況に応じたセレクトが可能です。</div></div></div>
+高級で様々なカラーパターンで、状況に応じたセレクトが可能です</div></div></div>
 
 <div style="width: auto; height: 400px; background-image: url(https://imgur.com/3VRxuQZ.png); font-family: 'Noto Serif JP', serif; padding:  30px 0 0 30px; margin-top: 30px;"><h2 style="font-size:40px;">【70㎜サイズ】</h2><p>
 小型のヤリ、ケンサキ～乗り渋りのパラソルクラスまで対応する70㎜サイズ<br>（エギ1.8号、浮スッテ2.5号相当）。</div>

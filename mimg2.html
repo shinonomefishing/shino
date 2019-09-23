@@ -48,6 +48,8 @@
     var sutte = ['https://imgur.com/Rv9KFYR.png','https://imgur.com/V3BgW71.png','https://imgur.com/O8hkL65.png','https://imgur.com/4Ns6DJb.png','https://imgur.com/OOAUJfG.png','https://imgur.com/ROwgD7c.png','https://imgur.com/DQGVuJF.png'];
     var newsutte = ['https://imgur.com/32Cb7Fq.png','https://imgur.com/yqXX9mK.png','https://imgur.com/tfonw3f.png','https://imgur.com/WIO5ZFK.png','https://imgur.com/xtWNyM4.png','https://imgur.com/qgXbGQl.png'];
     var sutte_glow = ['https://imgur.com/kyMdJKF.png','https://imgur.com/ck0AhdX.png','https://imgur.com/JHeMr4m.png','https://imgur.com/O42iuqg.png','https://imgur.com/EhCnAj7.png','https://imgur.com/QpB9hrS.png','https://imgur.com/tvCYkHu.png'];
+    var newsutte_glow = ['https://imgur.com/kAnMq0c.png','https://imgur.com/Ivnay2r.png','https://imgur.com/jNUnAQ9.png','https://imgur.com/C9Xt6Nv.png','https://imgur.com/NRXXD1E.png','https://imgur.com/p3wIBKc.png'];
+    var newstiny_glow = ['https://imgur.com/QJtnQa7.png','https://imgur.com/iGvxGBe.png','https://imgur.com/B3hCgFM.png','https://imgur.com/mwJbWyQ.png','https://imgur.com/9tdaMH5.png','https://imgur.com/TSYZZbx.png'];
     var suttenum = ['T01','T02','T03','T04','T05','T06','T07'];
     var newsnum = ['T09','T10','T11','T12','T13','T14'];
     var basicstn = ['https://imgur.com/ZB9c8wM.jpg','https://imgur.com/OXeULm7.png','https://imgur.com/KPywzh9.png','https://imgur.com/3fIsOJL.png','https://imgur.com/PRxJFID.png','https://imgur.com/6JXARR1.png','https://imgur.com/5SHSztN.png','https://imgur.com/6JXARR1.png'];
@@ -75,6 +77,13 @@
       obj.style.background = url;
       var objnum = document.getElementById('num').innerHTML=newsnum[i];
     }
+    function clicknewglow(name){
+      i = name;
+      var obj = document.getElementById('a');
+      var url = "url(" + newsutte_glow[i] + ")";
+      obj.style.background = url;
+      var objnum = document.getElementById('num').innerHTML=newsnum[i];
+    }
   function addnight(){
     if( snum == 0){
       for(var i = 0; i < basicglow.length; i++){
@@ -87,7 +96,7 @@
       for(var i = 0; i < newstn.length; i++){
         var jbBtn = document.createElement( 'div' );
         jbBtn.className = "bg";
-        var div1 = '<input type="image"  src=' + newstn[i] + ' onclick="clicknew(' + i + ')">';
+        var div1 = '<input type="image"  src=' + newstiny_glow[i] + ' onclick="clicknewglow(' + i + ')">';
         jbBtn.innerHTML = div1;
         document.getElementById('newpro').appendChild(jbBtn);
       }
@@ -104,7 +113,7 @@
     for(var i = 0; i < newstn.length; i++){
       var jbBtn = document.createElement( 'div' );
       jbBtn.className = "bg";
-      var div1 = '<input type="image"  src=' + newstn[i] + ' onclick="clicknew(' + i + ')">';
+      var div1 = '<input type="image"  src=' + newstiny_glow[i] + ' onclick="clicknewglow(' + i + ')">';
       jbBtn.innerHTML = div1;
       document.getElementById('newpro').appendChild(jbBtn);
     }

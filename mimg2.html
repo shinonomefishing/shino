@@ -27,6 +27,9 @@
       padding: 50px 0 0 30px;
       font-family: 'Oswald', sans-serif;
     }
+    #newpro{
+
+    }
     .bg{
       background-color: #FFF;
       margin: 10px 0 0 10px;
@@ -43,9 +46,12 @@
   <script>
     var i = 0;
     var sutte = ['https://imgur.com/Rv9KFYR.png','https://imgur.com/V3BgW71.png','https://imgur.com/O8hkL65.png','https://imgur.com/4Ns6DJb.png','https://imgur.com/OOAUJfG.png','https://imgur.com/ROwgD7c.png','https://imgur.com/DQGVuJF.png'];
+    var newsutte = ['https://imgur.com/32Cb7Fq.png','https://imgur.com/yqXX9mK.png','https://imgur.com/tfonw3f.png','https://imgur.com/WIO5ZFK.png','https://imgur.com/xtWNyM4.png','https://imgur.com/qgXbGQl.png'];
     var sutte_glow = ['https://imgur.com/kyMdJKF.png','https://imgur.com/ck0AhdX.png','https://imgur.com/JHeMr4m.png','https://imgur.com/O42iuqg.png','https://imgur.com/EhCnAj7.png','https://imgur.com/QpB9hrS.png','https://imgur.com/tvCYkHu.png'];
     var suttenum = ['T01','T02','T03','T04','T05','T06','T07'];
+    var newsnum = ['T09','T10','T11','T12','T13','T14'];
     var basicstn = ['https://imgur.com/ZB9c8wM.jpg','https://imgur.com/OXeULm7.png','https://imgur.com/KPywzh9.png','https://imgur.com/3fIsOJL.png','https://imgur.com/PRxJFID.png','https://imgur.com/6JXARR1.png','https://imgur.com/5SHSztN.png','https://imgur.com/6JXARR1.png'];
+    var newstn = ['https://imgur.com/tSEZAzq.png','https://imgur.com/zKeTStn.png','https://imgur.com/jCIKPe0.png','https://imgur.com/7eRO086.png','https://imgur.com/Sh5uGPk.png','https://imgur.com/GvddoeL.png'];
     var basicglow = ['https://imgur.com/rTjocPF.png','https://imgur.com/j2rDSAO.png','https://imgur.com/JSJ5vOY.png','https://imgur.com/UzCEYj3.png','https://imgur.com/RHNAG2m.png','https://imgur.com/zfg42ok.png','https://imgur.com/q7cuFvK.png'];
     var snum;
     function click2(name){
@@ -62,6 +68,13 @@
       obj.style.background = url;
       var objnum = document.getElementById('num').innerHTML=suttenum[i];
     }
+    function clicknew(name){
+      i = name;
+      var obj = document.getElementById('a');
+      var url = "url(" + newsutte[i] + ")";
+      obj.style.background = url;
+      var objnum = document.getElementById('num').innerHTML=newsnum[i];
+    }
   function addnight(){
     if( snum == 0){
       for(var i = 0; i < basicglow.length; i++){
@@ -70,6 +83,13 @@
         var div1 = '<input type="image"  src=' + basicglow[i] + ' onclick="click3(' + i + ')">';
         jbBtn.innerHTML = div1;
         document.getElementById('bgh').appendChild(jbBtn);
+      }
+      for(var i = 0; i < newstn.length; i++){
+        var jbBtn = document.createElement( 'div' );
+        jbBtn.className = "bg";
+        var div1 = '<input type="image"  src=' + newstn[i] + ' onclick="clicknew(' + i + ')">';
+        jbBtn.innerHTML = div1;
+        document.getElementById('newpro').appendChild(jbBtn);
       }
       snum = 1;
     }else{
@@ -80,6 +100,13 @@
         var div1 = '<input type="image"  src=' + basicglow[i] + ' onclick="click3(' + i + ')">';
         jbBtn.innerHTML = div1;
         document.getElementById('bgh').appendChild(jbBtn);
+    }
+    for(var i = 0; i < newstn.length; i++){
+      var jbBtn = document.createElement( 'div' );
+      jbBtn.className = "bg";
+      var div1 = '<input type="image"  src=' + newstn[i] + ' onclick="clicknew(' + i + ')">';
+      jbBtn.innerHTML = div1;
+      document.getElementById('newpro').appendChild(jbBtn);
     }
   }
 }
@@ -92,6 +119,13 @@ function addday(){
       jbBtn.innerHTML = div1;
       document.getElementById('bgh').appendChild(jbBtn);
     }
+    for(var i = 0; i < newstn.length; i++){
+      var jbBtn = document.createElement( 'div' );
+      jbBtn.className = "bg";
+      var div1 = '<input type="image"  src=' + newstn[i] + ' onclick="clicknew(' + i + ')">';
+      jbBtn.innerHTML = div1;
+      document.getElementById('newpro').appendChild(jbBtn);
+    }
     snum = 1;
   }else{
     removesum();
@@ -102,10 +136,18 @@ function addday(){
       jbBtn.innerHTML = div1;
       document.getElementById('bgh').appendChild(jbBtn);
   }
+  for(var i = 0; i < newstn.length; i++){
+    var jbBtn = document.createElement( 'div' );
+    jbBtn.className = "bg";
+    var div1 = '<input type="image"  src=' + newstn[i] + ' onclick="clicknew(' + i + ')">';
+    jbBtn.innerHTML = div1;
+    document.getElementById('newpro').appendChild(jbBtn);
+  }
 }
 }
   function removesum(){
     document.getElementById('bgh').innerHTML = "";
+    document.getElementById('newpro').innerHTML = "";
 }
   </script>
 </head>
@@ -156,6 +198,8 @@ function addday(){
     <div style="margin-top: 50px;">
       <div style="border-bottom: 2px solid #FFF; display: block; color: #FFF; margin-top: 10px;">PRODUCT KINDS (CLICK IMAGE)</div>
           <div id="bgh"></div>
+      <div style="border-bottom: 2px solid #FFF; display: block; color: #FFF; margin-top: 10px;">NEW PRODUCT KINDS (CLICK IMAGE)</div>
+          <div id="newpro"></div>
   <div style="background-color: white">
     <h2 class="probord">PRODUCT DETAILS</h2>
   </div>

@@ -1,0 +1,190 @@
+<!doctype HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Shinonome</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <style type="text/css">
+    .submenu{
+      height: 0px;
+      position: absolute;
+      overflow: hidden;
+      transition-property: height;
+      transition-duration: 0.5s;
+    }
+    .mainmenu:hover .submenu{
+      height: 110px;
+    }
+    .submenu li{
+      font-size: 20px;
+      float: none;
+    }
+    .container1{
+      margin: 10px auto;
+      max-width: 1200px;
+      padding: 0px;
+      background-color: white;
+    }
+    .container1 div{
+    }
+    #img{
+      margin: 15px 0 0 150px;
+      grid-column: 1 / 3;
+      grid-row: 1 / 5;
+    }
+    #name{
+      font-weight: 900;
+      margin-top: 10px;
+      font-size: 50px;
+      grid-column: 3 / 5;
+      grid-row: 1;
+    }
+    #price{
+      font-size: 30px;
+      margin-top: 20px;
+      grid-column: 3/5;
+      grid-row: 2/3;
+    }
+    #att{
+      font-size: 150px;
+      grid-column: 3/5;
+      grid-row: 3/5;
+    }
+    #case{
+      margin-top: 30px;
+      font-size: 50px;
+      grid-column: 4/5;
+      grid-row: 3/4;
+    }
+    #colorset{
+      font-size: 30px;
+      grid-column: 4/5;
+      grid-row: 4/5;
+    }
+    #grid{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+    }
+    .choice{
+      width: 1200px;
+      height: auto;
+    }
+    .boder{
+      border-bottom: solid 2px black;
+    }
+    #skirtmem{
+
+    }
+    .skirtname{
+      width: auto;
+      height: auto;
+      display: inline-block;
+      font-size: 40px;
+      margin-left: 60px;
+      margin-top: 10px;
+    }
+    #detailcut{
+      padding-top:20px;
+    }
+    #details{
+      border-top: solid 2px black;
+      border-bottom: solid 2px black;
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+    }
+  </style>
+  <script>
+    var colorset = ['','BASIC RED','DIA RED','BASIC ORANGE','DIA ORANGE'];
+    var headimg = ['1','2','3','4'];
+    var headsmall = ['s1.png','s2.png','s3.png','s4.png'];
+    function imgcre(){
+      for(var i=1; i<headsmall.length + 1; i++){
+        var headbase = document.createElement('div');
+        headbase.className="skirtname";
+        var headnum = '<img src="img/thead/s'+i+'.png" onclick="clickimg('+i+')">';
+        headbase.innerHTML = headnum;
+        document.getElementById('skirtmem').appendChild(headbase);
+      }
+    }
+    function clickimg(num){
+      var imgmain = document.getElementById('img');
+      imgmain.innerHTML = '<img src="img/thead/'+num+'.png" alt="img">';
+      var skirtvalue = document.getElementById('att');
+      var banl = document.getElementById('case');
+      var colorname = document.getElementById('colorset');
+      colorname.innerHTML = colorset[num];
+      if(num < 3){
+      skirtvalue.innerHTML = "#01";
+    }else {
+      skirtvalue.innerHTML = "#02";
+    }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="logo">
+      <a href="index.html"><img src="logo3.png"></a>
+    </h1>
+  <nav class="topnav">
+  <ul>
+      <li>
+  <a href="index.html">HOME</a>
+  </li>
+  <li class="mainmenu">
+    <a>PRODUCT</a>
+      <ul class="submenu">
+        <li><a href="product.html">SHINONOME</a></li>
+        <li><a href="shinsei.html">SHINSEI</a></li>
+      </ul>
+  </li>
+  <li>
+  <a href="concept.html">CONCEPT</a>
+  </li>
+
+  <li>
+  <a href="about.html">ABOUT US</a>
+  </li>
+  <li>
+  <a href="news.html">NEWS</a>
+  </li>
+  </ul>
+  </nav>
+</div>
+<div class="twobord bord align-center"><h1>PRODUCT</h1></div>
+<div class="container1">
+  <div id="grid">
+    <div id="img"><img src="img/thead/1.png" alt="img"></div>
+    <div id="name">TUNGSTEN HEAD</div>
+    <div id="price">販売価格(税別) open</div>
+    <div id="att">#01</div>
+    <div id="case">重量: 100g</div>
+    <div id="colorset">BASIC RED</div>
+  </div>
+  <div class="choice">
+    <div class="boder">click image</div>
+    <div id="skirtmem"></div>
+  </div>
+  <div id="detailcut">
+    <div id="details">DETAILS</div>
+  <div style="background-image:url(img/thead/t1.png); width:1200px; height:400px;"><div style="padding:70px 0 0 50px; font-size:30px; font-weight:700; font-family: 'Noto Serif JP', serif;">複雑な鳥を攻略するタングステンタイラバーヘッド</div></div>
+  <div style="background-image:url(img/thead/t2.png); width:1200px; height:400px;"><div style="padding:80px 0 0 320px; font-size:50px; font-weight:900; font-family: 'Noto Serif JP', serif; color:black;">高密度タングステン素材<p style="padding:80px 0 0 30px; font-size:40px; font-weight:900; font-family: 'Noto Serif JP', serif; ">小さいサイズでも圧倒的な重量を発散する！</p></div></div>
+  <div style="background-image:url(img/thead/t3.png); width:1200px; height:400px;"><div style="padding:80px 0 0 400px; font-size:35px; font-weight:700; font-family: 'Noto Serif JP', serif;">リーリングに無理のない工学に基づくデザイン<p style="padding:100px 0 0 60px; font-size:25px; font-weight:700; font-family: 'Noto Serif JP', serif;">
+    助手に応じて上下を変えて使用することで、<br>微細なコントロールが可能</p></div></div>
+  <div style="background-image:url(img/thead/t4.png); width:1200px; height:400px;"><div style="padding:100px 0 0 400px; font-size:40px; font-weight:700; font-family: 'Noto Serif JP', serif;">私の機器を大切に...<p style="padding:60px 0 0 0px; font-size:30px; font-weight:700; font-family: 'Noto Serif JP', serif;">バー摩擦防止のための特殊樹脂パイプ！</p></div></div>
+  <div style="background-image:url(img/thead/t5.png); width:1200px; height:400px;"><div style="padding:300px 0 0 30px; font-size:20px; font-weight:700; font-family: 'Noto Serif JP', serif;">天然アワビの輝きをそのまま模し作成された瞳<br>カモフラージュ</div></div>
+  <div style="background-image:url(img/thead/t6.png); width:1200px; height:400px;"></div>
+</div>
+</div>
+<script>
+  imgcre();
+</script>
+</body>
+</html>

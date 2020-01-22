@@ -7,6 +7,20 @@
   <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
+  .submenu{
+    height: 0px;
+    position: absolute;
+    overflow: hidden;
+    transition-property: height;
+    transition-duration: 0.5s;
+  }
+  .mainmenu:hover .submenu{
+    height: 110px;
+  }
+  .submenu li{
+    font-size: 20px;
+    float: none;
+  }
     #stanimg{
       display: inline-block;
     }
@@ -178,8 +192,12 @@ function addday(){
   <li>
     <a href="index.html">HOME</a>
     </li>
-        <li>
-    <a href="product.html">PRODUCT</a>
+    <li class="mainmenu">
+      <a>PRODUCT</a>
+        <ul class="submenu">
+          <li><a href="product.html">SHINONOME</a></li>
+          <li><a href="shinsei.html">SHINSEI</a></li>
+        </ul>
     </li>
     <li>
     <a href="concept.html">CONCEPT</a>

@@ -6,6 +6,47 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <style type="text/css">
+    .submenu{
+      height: 0px;
+      position: absolute;
+      overflow: hidden;
+      transition-property: height;
+      transition-duration: 0.5s;
+    }
+    .mainmenu:hover .submenu{
+      height: 60px;
+    }
+    .submenu li{
+      font-size: 20px;
+      float: none;
+    }
+    #shinsei {}
+  </style>
+  <script>
+  var shinseilogo = "https://imgur.com/HrjhE3G.png";
+  var shinonomelogo = "https://imgur.com/vIirEqk.png";
+    function clickshinsei(){
+      removelogo();
+      var logocre = document.createElement('div');
+      logocre.className = "logo";
+      var test = '<input type= "image" src =' + shinseilogo + '>';
+      logocre.innerHTML = test;
+      document.getElementById('shinsei').appendChild(logocre);
+    }
+    function clickshinonome(){
+      removelogo();
+      var logocre = document.createElement('div');
+      logocre.className = "logo";
+      var test = '<input type= "image" src =' + shinonomelogo + '>';
+      logocre.innerHTML = test;
+      document.getElementById('shinsei').appendChild(logocre);
+    }
+    function removelogo(){
+      document.getElementById('shinsei').innerHTML = "";
+    }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -17,8 +58,12 @@
   <li>
     <a href="index.html">HOME</a>
     </li>
-        <li>
-    <a href="product.html">PRODUCT</a>
+    <li class="mainmenu">
+      <a>PRODUCT</a>
+        <ul class="submenu">
+          <li><a onclick="clickshinonome();" href="product.html">SHINONOME</a></li>
+          <li><a onclick="clickshinsei();" href="shinsei.html">SHINSEI</a></li>
+        </ul>
     </li>
     <li>
     <a href="concept.html">CONCEPT</a>

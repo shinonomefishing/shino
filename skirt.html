@@ -31,20 +31,23 @@
     .container1 div{
     }
     #img{
-      margin: 15px 0 0 15px;
+      margin: 15px 0 0 40px;
       grid-column: 1 / 3;
       grid-row: 1 / 5;
+      border-right: solid 5px black;
     }
     #name{
       font-weight: 900;
-      margin-top: 10px;
-      font-size: 50px;
+      margin-top: 40px;
+      font-size: 55px;
+      text-align: center;
       grid-column: 3 / 5;
       grid-row: 1;
     }
     #price{
       font-size: 30px;
       margin-top: 20px;
+      text-align: center;
       grid-column: 3/5;
       grid-row: 2/3;
     }
@@ -63,12 +66,15 @@
       font-size: 30px;
       grid-column: 4/5;
       grid-row: 4/5;
+      font-weight: 700;
+      color: red;
     }
     #grid{
       display: grid;
       grid-template-columns: repeat(4,1fr);
       grid-gap: 10px;
       grid-auto-rows: minmax(100px, auto);
+      margin-bottom: 20px;
     }
     .choice{
 
@@ -76,17 +82,24 @@
       height: auto;
     }
     .boder{
+      height: 30px;
       border-bottom: solid 2px black;
+      color: red;
+      font-size: 20px;
+      font-weight: 600;
     }
     #skirtmem{
 
     }
     .skirtname{
       width: 100px;
-      height: 100px;
+      height: 140px;
       display: inline-block;
-      font-size: 40px;
+      font-size: 25px;
       margin:10px 0 0 10px;
+      border: solid black 1px;
+      text-align: center;
+      font-weight: 700;
     }
     #detailcut{
       padding-top:20px;
@@ -99,6 +112,8 @@
       font-weight: 600;
       text-align: center;
     }
+    #grid div{
+    }
   </style>
   <script>
     var colorset = ['','ORENGE+ORENGE','ORENGE+RED','ORENGE+PINK','RED+RED','RED+ORENGE','RED+KEIMURA','ORENGE+KEIMURA','ORENGE+ORENGE','ORENGE+RED','ORENGE+PINK','RED+RED','RED+ORENGE','RED+KEIMURA','ORENGE+KEIMURA'];
@@ -107,7 +122,11 @@
       for(var i=1; i<skirtimg.length + 1; i++){
         var skirtbase = document.createElement('div');
         skirtbase.className="skirtname";
-        var skirtnum = '<img src="img/skirt/s'+i+'.png" onclick="clickimg('+i+')">';
+        if(i<10){
+        var skirtnum = '<img src="img/skirt/s'+i+'.png" onclick="clickimg('+i+')">#0'+i;
+      }else{
+        var skirtnum = '<img src="img/skirt/s'+i+'.png" onclick="clickimg('+i+')">#'+i;
+      }
         skirtbase.innerHTML = skirtnum;
         document.getElementById('skirtmem').appendChild(skirtbase);
       }
@@ -135,7 +154,7 @@
 <body>
   <div class="container">
     <h1 class="logo">
-      <a href="index.html"><img src="logo3.png"></a>
+      <a href="index.html"><img src="https://imgur.com/HrjhE3G.png"></a>
     </h1>
   <nav class="topnav">
   <ul>
@@ -164,6 +183,7 @@
 </div>
 <div class="twobord bord align-center"><h1>PRODUCT</h1></div>
 <div class="container1">
+  <div style="background-image:url(img/skirt/a5.png); width:1200px; height:400px;"><img src="https://imgur.com/HrjhE3G.png" style="padding:200px 0 0 1000px;"></div>
   <div id="grid">
     <div id="img"><img src="img/skirt/1.png" alt="img"></div>
     <div id="name">TIE RUBBER SKIRT</div>
@@ -173,7 +193,7 @@
     <div id="colorset">ORENGE+ORENGE</div>
   </div>
   <div class="choice">
-    <div class="boder">click number</div>
+    <div class="boder">click image</div>
     <div id="skirtmem"></div>
   </div>
   <div id="detailcut">
@@ -183,7 +203,6 @@
     <div style="background-image:url(img/skirt/a3.png); width:1200px; height:400px;"><div style="padding:50px 0 0 100px; font-size:30px; font-weight:700; font-family: 'Noto Serif JP', serif;">高弾性シリコンを採用！<p>
     アタリにかけて違和感はゼロ。</p></div></div>
       <div style="background-image:url(img/skirt/a4.png); width:1200px; height:400px;"><div style="padding:50px 0 0 100px; font-size:30px; font-weight:700; font-family: 'Noto Serif JP', serif;">ミミズのような動きのスカート</div></div>
-        <div style="background-image:url(img/skirt/a5.png); width:1200px; height:400px;"></div>
 </div>
 </div>
 <script>

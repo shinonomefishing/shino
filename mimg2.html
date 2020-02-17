@@ -22,186 +22,199 @@
     font-size: 20px;
     float: none;
   }
-    #a{
-      display: inline-block;
+    .handler{
+      margin-top: 30px;
+      display: flex;
+      width: 1200px;
+      height: 500px;
+      border: solid 1px white;
+    }
+    #mainimg{
+      margin: 10px 0 0 20px;
       width: 500px;
       height: 400px;
-      background: url(https://imgur.com/Rv9KFYR.png);
+      border: solid 1px red;
+    }
+    .hul{
+      margin: 0 0 0 20px;
       margin-top: 20px;
+      list-style: none;
+      width: auto;
+    }
+    .hli{
+      width: 150px;
+      height: 50px;
+      border: solid 1px white;
+      margin-right: 23px;
+      float: left;
+      padding: 0;
+    }
+    .hli:last-child{
+      margin-right: 0px;
+    }
+    .hlione{
+      width: 150px;
+      height: 50px;
+      border: solid 1px white;
+      margin: 0 0 0 173px;
+      padding: 0;
+    }
+    .imgclass{
+      width: 45%;
+      float: left;
+    }
+    #minimg{
+      width: 1200px;
+      height: 55px;
+      margin-top: 20px;
+      list-style: none;
+    }
+    .mins{
+      width: 150px;
+      height: 50px;
+      border: solid 1px red;
+      padding: 0;
+      display: inline-block;
+    }
+    .textpage{
+      display: block;
+      width: 55%;
+      height: auto;
+      border-left: solid 5px white;
+      float: left;
+    }
+    .pname{
+      margin: 10px 30px 0 30px;
+      color:white;
       font-size: 60px;
-      border: 3px solid red;
-      position: absolute;
+      border-bottom: solid 5px white;
     }
-    #num{
-      height: 100px;
-      margin: 60px 0 0 150px;
-      font-size: 160px;
-      color:#FFF;
-      border: 2px solid #FFF;
-      padding: 50px 0 0 30px;
-      font-family: 'Oswald', sans-serif;
+    .smalltext{
+      margin: 20px 30px 0 30px;
+      color: white;
+      border: dashed 3px white;
+      width: auto;
+      height: 150px;
+      padding: 0 0 0 20px;
     }
-    #newpro{
-
+    .att{
+      margin: 20px 30px 0 30px;
+      display: flex;
+      border-top: solid 5px white;
+      padding-top: 20px;
     }
-    .bg{
-      background-color: #FFF;
-      margin: 10px 0 0 10px;
-      display: inline-block;
-      border: 3px solid pink;
+    .pnum{
+      color: white;
+      font-size: 100px;
+      font-weight: 900;
+      border: solid 1px white;
+      width: 250px;
     }
-    .bg1{
-      background-color: #000000;
-      margin: 10px 0 0 10px;
-      display: inline-block;
-      border: 3px solid pink;
+    .patt{
+      margin-left: 40px;
+      width: 54%;
     }
-    #modal{
-      display: none;
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgb(0,0,0);
-      background-color: rgba(0,0,0,0.4);
+    .price{
+      color: white;
+      font-size: 30px;
+      border-bottom: solid 1px white;
+      margin-top: 10px;
     }
-    #modal_content{
-      background-color: #fefefe;
-      margin: 15% auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 50%;
+    .pcolor{
+      margin-top: 20px;
+      color: white;
+      font-size: 50px;
+      border-bottom: solid 1px white;
     }
-    #standard{
-
+    .sp{
+      font-size: 20px;
+      margin: 10px 0 5px 0;
+      font-weight: 900;
     }
-    #kei{
-
+    .coution{
+      color:red;
+      margin-top: 5px;
+    }
+    .cname{
+      font-size: 20px;
+      font-weight: 900;
+      margin-top: 10px;
     }
   </style>
   <script>
-    var i = 0;
-    var sutte = ['https://imgur.com/Rv9KFYR.png','https://imgur.com/V3BgW71.png','https://imgur.com/O8hkL65.png','https://imgur.com/4Ns6DJb.png','https://imgur.com/OOAUJfG.png','https://imgur.com/ROwgD7c.png','https://imgur.com/DQGVuJF.png'];
-    var newsutte = ['https://imgur.com/32Cb7Fq.png','https://imgur.com/yqXX9mK.png','https://imgur.com/tfonw3f.png','https://imgur.com/WIO5ZFK.png','https://imgur.com/xtWNyM4.png','https://imgur.com/qgXbGQl.png'];
-    var sutte_glow = ['https://imgur.com/kyMdJKF.png','https://imgur.com/ck0AhdX.png','https://imgur.com/JHeMr4m.png','https://imgur.com/O42iuqg.png','https://imgur.com/EhCnAj7.png','https://imgur.com/QpB9hrS.png','https://imgur.com/tvCYkHu.png'];
-    var newsutte_glow = ['https://imgur.com/kAnMq0c.png','https://imgur.com/Ivnay2r.png','https://imgur.com/jNUnAQ9.png','https://imgur.com/C9Xt6Nv.png','https://imgur.com/NRXXD1E.png','https://imgur.com/p3wIBKc.png'];
-    var newstiny_glow = ['https://imgur.com/QJtnQa7.png','https://imgur.com/iGvxGBe.png','https://imgur.com/B3hCgFM.png','https://imgur.com/mwJbWyQ.png','https://imgur.com/9tdaMH5.png','https://imgur.com/TSYZZbx.png'];
-    var suttenum = ['T01','T02','T03','T04','T05','T06','T07'];
-    var newsnum = ['T09','T10','T11','T12','T13','T14'];
-    var basicstn = ['https://imgur.com/ZB9c8wM.jpg','https://imgur.com/OXeULm7.png','https://imgur.com/KPywzh9.png','https://imgur.com/3fIsOJL.png','https://imgur.com/PRxJFID.png','https://imgur.com/6JXARR1.png','https://imgur.com/5SHSztN.png','https://imgur.com/6JXARR1.png'];
-    var newstn = ['https://imgur.com/tSEZAzq.png','https://imgur.com/zKeTStn.png','https://imgur.com/jCIKPe0.png','https://imgur.com/7eRO086.png','https://imgur.com/Sh5uGPk.png','https://imgur.com/GvddoeL.png'];
-    var basicglow = ['https://imgur.com/rTjocPF.png','https://imgur.com/j2rDSAO.png','https://imgur.com/JSJ5vOY.png','https://imgur.com/UzCEYj3.png','https://imgur.com/RHNAG2m.png','https://imgur.com/zfg42ok.png','https://imgur.com/q7cuFvK.png'];
-    var snum;
-
-    function click2(name){
-      i = name;
-      var obj = document.getElementById('a');
-      var url = "url(" + sutte[i] + ")";
-      obj.style.background = url;
-      var objnum = document.getElementById('num').innerHTML=suttenum[i];
-      var standard = document.getElementById('standard');
-      standard.innerHTML="<img src='./img/skirt/"+i+".png'>";
-      var kei = document.getElementById('kei');
-      kei.innerHTML="<img src='./img/skirt/"+i+".png'>";
-    }
-    function click3(name){
-      i = name;
-      var obj = document.getElementById('a');
-      var url = "url(" + sutte_glow[i] + ")";
-      obj.style.background = url;
-      var objnum = document.getElementById('num').innerHTML=suttenum[i];
-    }
-    function clicknew(name){
-      i = name;
-      var obj = document.getElementById('a');
-      var url = "url(" + newsutte[i] + ")";
-      obj.style.background = url;
-      var objnum = document.getElementById('num').innerHTML=newsnum[i];
-    }
-    function clicknewglow(name){
-      i = name;
-      var obj = document.getElementById('a');
-      var url = "url(" + newsutte_glow[i] + ")";
-      obj.style.background = url;
-      var objnum = document.getElementById('num').innerHTML=newsnum[i];
-    }
-  function addnight(){
-    if( snum == 0){
-      for(var i = 0; i < basicglow.length; i++){
-        var jbBtn = document.createElement( 'div' );
-        jbBtn.className = "bg1";
-        var div1 = '<input type="image"  src=' + basicglow[i] + ' onclick="click3(' + i + ')">';
-        jbBtn.innerHTML = div1;
-        document.getElementById('bgh').appendChild(jbBtn);
+  var stext = ['','サバストライプを使用して、自然なサバの感じで製作しました。<br>頭足類の立場でおいしそうに見えます。','フグの柄を描きました。ナチュラルなカラー感で、<br>環境に同化されて境界性を削減しました。<br>レッド、ブルー夜光はありません。','グリーンカラーを、一般的な魚の縞に組み合わせました。<br>ナチュラルなカラー感で、<br>環境に同化されて境界性が低くなります。<br>レッド、ブルー夜光はありません。','おいしそうなオレンジを鱗柄に加味して視認性を高めました。<br>目立つカラー感で標的になりやすい。<br>レッド、ブルー夜光はありません。','周辺環境のフルセクを加味して底層の頭足類を攻略します。<br>底層に住む頭足類は境界せずに近づいていきます。<br>レッド、ブルー夜光はありません。','周辺環境のフルセクを加味して底層の頭足類を攻略します。<br>ナチュラルなカラー感で周囲の環境に同化されます。<br>レッド、ブルー夜光はありません。','オレンジ色の緑の色を加味した製品です。<br>目にとまり、アタリが早くおいしそうなカラー感に誘惑します。<br>レッド、ブルー夜光はありません。','赤の色にオレンジ色を加味した製品です。<br>目にとまり、アタリが早くおいしそうなカラー感に誘惑します。<br>レッド、ブルー夜光はありません。','韓国の人気のあるスイカの色のカラーです。<br>人気の理由のある色です。','韓国の人気のコチュジャンの色のカラーです。<br>人気の理由のある色です。','栄養価の高い多くの青魚です。<br>斑点表現により視認性が最大化された。','レッドブラウン背筋に黄色の線をグオトた。<br>黄色のラインのためにアクション時錯視が起こります。','ピンクブラウン背筋に黄色の線をグオトた。<br>黄色のラインのためにアクション時錯視が起こります。','最も一般的な魚の色です。<br>ナチュラルカラーを最高使用しました。','前方はピンク裏側はイエローです。<br>夜光状態も2色で表示されます。','ブルー斑点の色をでした。<br>斑点表現により視認性が最大化された。','ブラック地にうっすらと骨の柄を入れました。<br>夜光時、実際の魚のような効果を示しています。'];
+  var sname = ['','サバスタイル','フグスペシャル','ナチュラルグリーン','オレンジ鱗','プロブラウン','ナチュラルブラウン','オレンジグリーン','レッドオレンジ','スイカ','コチュジャン','ブルー斑点','レッドブラウン','ピンクブラウン','はタチウオ','トゥフェイス','ピンク斑点','プレミアムブラック'];
+  var coution = "※注意事項：三つの夜光に応じて製品番号が異なります。※";
+  var glowname = ['通常夜光','レッド夜光','ブルー夜光'];
+  var glowtext = ['通常の夜光色です。<br>ほのか緑の色で、既存の姿と同じです。<br>暗い海の中に明るく光ります。','魅惑的なレッド夜光です。<br>赤く明るくなるので、視認性に優れています。<br>柄はそのまま生かしました。','海の中に光を内面青い光がされます。<br>ナチュラルなカラーで最も自然に光ります。<br>境界性が極限に低くなります。'];
+    function minimg(){ //1~17번 이미지 생성
+      for(var i=1; i<18; i++){
+      var min = document.querySelector('#minimg');
+      var minli = document.createElement('li');
+      minli.className = "mins";
+        minli.innerHTML = "<input type='image' src='./img/sutte/min/t"+i+"s.png' onclick='clickmin("+i+")'>";
+        min.appendChild(minli);
       }
-      for(var i = 0; i < newstn.length; i++){
-        var jbBtn = document.createElement( 'div' );
-        jbBtn.className = "bg";
-        var div1 = '<input type="image"  src=' + newstiny_glow[i] + ' onclick="clicknewglow(' + i + ')">';
-        jbBtn.innerHTML = div1;
-        document.getElementById('newpro').appendChild(jbBtn);
+    }
+    function startimg(){ //핸들러 초기화
+      clickmin(1);
+    }
+    function clickmin(num){ //1~17번 이미지 클릭
+      var mainimg = document.querySelector('#mainimg');
+      mainimg.innerHTML = "<img src='./img/sutte/max/t"+num+"s.png'>";
+      var pnum = document.querySelector('.pnum');
+      var smalltext = document.querySelector('.smalltext');
+      smalltext.innerHTML = "<p class='cname'>"+sname[num]+"</p>"+stext[num];
+      var pcolor = document.querySelector('.pcolor');
+      pcolor.innerHTML = "STANDARD";
+      if(num < 10){
+        pnum.innerHTML = "T0"+num;
+      }else {
+        pnum.innerHTML = "T"+num;
       }
-      snum = 1;
-    }else{
-      removesum();
-      for(var i = 0; i < basicglow.length; i++){
-        var jbBtn = document.createElement( 'div' );
-        jbBtn.className = "bg1";
-        var div1 = '<input type="image"  src=' + basicglow[i] + ' onclick="click3(' + i + ')">';
-        jbBtn.innerHTML = div1;
-        document.getElementById('bgh').appendChild(jbBtn);
+      if(num>1 && num<9){
+        var hul = document.querySelector('.hul');
+        hli = document.createElement('li');
+        hli.className = "hlione";
+        hul.innerHTML = "";
+        hli.innerHTML = "<input type='image' src='./img/sutte/min/t"+num+"g.png' onclick='clickmax("+num+",0)'>";
+        hul.appendChild(hli);
+      }else{
+      for(var i = 0; i < 3; i++){
+        var hul = document.querySelector('.hul');
+        hli = document.createElement('li');
+        hli.className = "hli";
+        if(i == 0){
+        hul.innerHTML = "";
+        hli.innerHTML = "<input type='image' src='./img/sutte/min/t"+num+"g.png' onclick='clickmax("+num+","+i+")'>";
+        hul.appendChild(hli);
+      }else if (i == 1) {
+        hli.innerHTML = "<input type='image' src='./img/sutte/min/t"+num+"r.png' onclick='clickmax("+num+","+i+")'>";
+        hul.appendChild(hli);
+      }else {
+        hli.innerHTML = "<input type='image' src='./img/sutte/min/t"+num+"b.png' onclick='clickmax("+num+","+i+")'>";
+        hul.appendChild(hli);
+      }
+      }
+      }
     }
-    for(var i = 0; i < newstn.length; i++){
-      var jbBtn = document.createElement( 'div' );
-      jbBtn.className = "bg";
-      var div1 = '<input type="image"  src=' + newstiny_glow[i] + ' onclick="clicknewglow(' + i + ')">';
-      jbBtn.innerHTML = div1;
-      document.getElementById('newpro').appendChild(jbBtn);
+    function clickmax(i,num){ //일반, 레드, 블루 야광 클릭
+      var mainimg = document.querySelector('#mainimg');
+      var color = ['g','r','b'];
+      var pcolor = ['','R','B'];
+      var colorname = document.querySelector('.pcolor');
+      var colorset = ['GLOW','RED GLOW','BLUE GLOW'];
+      mainimg.innerHTML = "<img src='./img/sutte/max/t"+i+""+color[num]+".png'>";
+      var pnum = document.querySelector('.pnum');
+      colorname.innerHTML = colorset[num];
+      if(i < 10){
+        pnum.innerHTML = "T0"+i+""+pcolor[num];
+      }else{
+        pnum.innerHTML = "T"+i+""+pcolor[num];
+      }
+      var smalltext = document.querySelector('.smalltext');
+      smalltext.innerHTML = "<p class='sp'>"+glowname[num]+"</p>"+glowtext[num]+"<p class='coution'>"+coution+"</p>";
     }
-  }
-}
-function addday(){
-  if( snum == 0){
-    for(var i = 0; i < basicglow.length; i++){
-      var jbBtn = document.createElement( 'div' );
-      jbBtn.className = "bg";
-      var div1 = '<input type="image"  src=' + basicstn[i] + ' onclick="click2(' + i + ')">';
-      jbBtn.innerHTML = div1;
-      document.getElementById('bgh').appendChild(jbBtn);
-    }
-    for(var i = 0; i < newstn.length; i++){
-      var jbBtn = document.createElement( 'div' );
-      jbBtn.className = "bg";
-      var div1 = '<input type="image"  src=' + newstn[i] + ' onclick="clicknew(' + i + ')">';
-      jbBtn.innerHTML = div1;
-      document.getElementById('newpro').appendChild(jbBtn);
-    }
-    snum = 1;
-  }else{
-    removesum();
-    for(var i = 0; i < basicglow.length; i++){
-      var jbBtn = document.createElement( 'div' );
-      jbBtn.className = "bg";
-      var div1 = '<input type="image"  src=' + basicstn[i] + ' onclick="click2(' + i + ')">';
-      jbBtn.innerHTML = div1;
-      document.getElementById('bgh').appendChild(jbBtn);
-  }
-  for(var i = 0; i < newstn.length; i++){
-    var jbBtn = document.createElement( 'div' );
-    jbBtn.className = "bg";
-    var div1 = '<input type="image"  src=' + newstn[i] + ' onclick="clicknew(' + i + ')">';
-    jbBtn.innerHTML = div1;
-    document.getElementById('newpro').appendChild(jbBtn);
-  }
-}
-}
-  function removesum(){
-    document.getElementById('bgh').innerHTML = "";
-    document.getElementById('newpro').innerHTML = "";
-}
   </script>
 </head>
 <body>
@@ -235,34 +248,30 @@ function addday(){
   </nav>
 </div>
 <div class="twobord bord align-center"><h1>PRODUCT</h1></div>
-<div style="width:106px; height:70px; position:absolute; margin: 504px 0 0 200px;">
-  <input type="image" src="https://imgur.com/LmyzfI6.png" style="width:50px; height: 70px;" onclick="addday()">
-  <input type="image" src="https://imgur.com/ytmT5JY.png" style="width:50px; height: 70px;" onclick="addnight()">
-</div>
-<div style="width:50px; height:70px; position:absolute; margin: 584px 0 0 227px;"><img src="https://imgur.com/tfRoEab.png">
-</div>
+
   <div class="container">
 
-    <div id="a"><img src="https://imgur.com/shLxWE6.png" style="padding: 50px 0 0 20px;"></div>
-    <div id="modal">
-      <div id="modal_content">
-        <div id="standard"></div>
-        <div id="kei"></div>
+      <div class="handler">
+        <div class="imgclass">
+          <div id="mainimg"></div>
+          <ul class="hul"></ul>
+        </div>
+        <div class="textpage">
+          <div class="pname">SHIGURE SUTTE</div>
+          <div class="smalltext">
+          </div>
+          <div class="att">
+            <div class="pnum">T01</div>
+            <div class="patt">
+              <div class="price">販売価格(税別) : ¥600</div>
+              <div class="pcolor"></div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div style="width: 500px; height: 400px; background-color: #000000; margin: 20px 0 0 600px; display: inline-block;">
-      <div style="width:420px; height:100px; margin: 30px 0 0 40px; font-size: 50px; font-family: 'Oswald', sans-serif; color:white;">Shigure Sutte</div>
-      <div style="width:420px; height: 50px; border-top: 2px solid #FFF; border-bottom: 2px solid #FFF; margin-left: 30px; line-height: 30px;">
-        <span style="color:white;">販売価格(税別)</span>
-        <span style="font-size: 40px; font-weight: 900; margin: 0px 0 0 30px; color:white;">¥600</span>
-        <div id="num">T01</div>
-      </div>
-    </div>
-    <div style="margin-top: 50px;">
-      <div style="border-bottom: 2px solid #FFF; display: block; color: #FFF; margin-top: 10px;">PRODUCT KINDS (CLICK IMAGE)</div>
-          <div id="bgh"></div>
-      <div style="border-bottom: 2px solid #FFF; display: block; color: #FFF; margin-top: 10px;">NEW PRODUCT KINDS (CLICK IMAGE)</div>
-          <div id="newpro"></div>
+    <ul id="minimg">
+
+    </ul>
   <div style="background-color: white">
     <h2 class="probord">PRODUCT DETAILS</h2>
   </div>
@@ -285,7 +294,7 @@ function addday(){
 <div style="width: auto; height: 400px; background-image: url(https://imgur.com/iAnSUJ2.png); font-family: 'Noto Serif JP', serif;"><div style="padding:  200px 0 0 500px; margin-top: 30px;"><h2 style="font-size:40px;">【イカの掛かりを重視した鋭い針】</h2><p>
 触れただけで掛かる！そして耐久性にもこだわった高級針を使用。<br>
 強度と刺さりやすさを考慮し、刺さってからはバレにくい丸曲げを採用。</div></div>
-</div>
+
 
 <div style="width: auto; height: 400px; background-image: url(https://imgur.com/kzUuyky.png); font-family: 'Noto Serif JP', serif; color: #FFF;"><div style="padding:  30px 0 0 500px; margin-top: 30px;"><h2 style="font-size:40px;">【夜光ボディ】</h2><p>
   暗い海中下でもしっかりとイカにアピールするグローボディを採用！
@@ -300,13 +309,12 @@ function addday(){
   </div></div>
   <div style="width: auto; height: 400px; background-image: url(https://imgur.com/0KZuMDF.png); font-family: 'Noto Serif JP', serif; color: #000000;"><div style="padding:  80px 0 0 50px; margin-top: 30px;"><h2 style="font-size:40px;">【水平機能はそのまま!】</h2><p>
         様々な環境でも水平を維持し、生きている生物のように動きます。
-  </div></div>
+  </div></div></div>
 </div>
 </div>
 <script>
-addday();
-
-</script>
+minimg();
+startimg();
 </script>
   </body>
 </html>

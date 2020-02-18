@@ -66,15 +66,17 @@
     #minimg{
       width: 1200px;
       height: 55px;
-      margin-top: 20px;
+      margin: 20px 0 20px 0;
       list-style: none;
     }
     .mins{
       width: 150px;
       height: 50px;
-      border: solid 1px red;
       padding: 0;
       display: inline-block;
+    }
+    .mins:last-child{
+      margin-bottom: 20px;
     }
     .textpage{
       display: block;
@@ -207,6 +209,8 @@
       mainimg.innerHTML = "<img src='./img/sutte/max/t"+i+""+color[num]+".png'>";
       var pnum = document.querySelector('.pnum');
       colorname.innerHTML = colorset[num];
+      var hul = document.querySelector('.hul');
+      hul.childNodes[num].innerHTML = "<input type='image' src='./img/sutte/min/t"+i+"s.png' onclick='clickmin("+i+")'>";
       if(i < 10){
         pnum.innerHTML = "T0"+i+""+pcolor[num];
       }else{
@@ -250,7 +254,7 @@
 <div class="twobord bord align-center"><h1>PRODUCT</h1></div>
 
   <div class="container">
-
+    <div class="newproduct"><img src="./img/mainslide/3.gif" width="1200px"></div>
       <div class="handler">
         <div class="imgclass">
           <div id="mainimg"></div>
@@ -272,10 +276,11 @@
     <ul id="minimg">
 
     </ul>
-  <div style="background-color: white">
+  <div style="background-color: white;">
     <h2 class="probord">PRODUCT DETAILS</h2>
   </div>
-<div><img src="./img/sutte/detaill/sutte_all_glow.png"></div>
+<div><img src="./img/sutte/detaill/d1.png"></div>
+<div><img src="./img/sutte/detaill/d2.png"></div>
 <div style="width: auto; height: 400px; background-image: url(https://imgur.com/uOWMsCM.png); padding:30px 0 0 50px;"><div style="margin: 0 40px 100px 650px; font-family: 'Noto Serif JP', serif;"><h2 style="color: #000000; font-size:35px;">【より効果的な音を求め！】</h2><p>
 イカの可聴領域のなかで、最も聴き取りやすい周波数の音が出やすい材料をラトルとして使いました。スッテとしての基本性能にプラスされた効果的なラトル音が、好奇心の高い高活性イカを寄せる強力な武器になります。</div></div>
 
@@ -299,9 +304,6 @@
 <div style="width: auto; height: 400px; background-image: url(https://imgur.com/kzUuyky.png); font-family: 'Noto Serif JP', serif; color: #FFF;"><div style="padding:  30px 0 0 500px; margin-top: 30px;"><h2 style="font-size:40px;">【夜光ボディ】</h2><p>
   暗い海中下でもしっかりとイカにアピールするグローボディを採用！
   </div></div>
-  <div style="background-color: white">
-    <h2 class="probord">NEW PRODUCT DETAILS</h2>
-  </div>
   <div style="width: auto; height: 400px; background-image: url(https://imgur.com/2jPoJjp.png); font-family: 'Noto Serif JP', serif; color: #FFF;"><div style="padding:  10px 0 0 500px; margin-top: 30px;"><h2 style="font-size:40px;">【しぐれスッテ新カラー発売!】</h2>
   </div></div>
   <div style="width: auto; height: 400px; background-image: url(https://imgur.com/Tlu9YqI.png); font-family: 'Noto Serif JP', serif; color: #FFF;"><div style="padding:  5px 0 0 500px; margin-top: 30px;"><h2 style="font-size:40px;">【トレンドカラーでのラインナップ】</h2><p>

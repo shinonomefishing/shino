@@ -1,0 +1,320 @@
+<!doctype HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Shinonome</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  .submenu{
+    height: 0px;
+    position: absolute;
+    overflow: hidden;
+    transition-property: height;
+    transition-duration: 0.5s;
+  }
+  .mainmenu:hover .submenu{
+    height: 110px;
+  }
+  .submenu li{
+    font-size: 20px;
+    float: none;
+  }
+    .handler{
+      margin-top: 30px;
+      display: flex;
+      width: 1200px;
+      height: 500px;
+      border: solid 1px white;
+    }
+    #mainimg{
+      margin: 10px 0 0 20px;
+      width: 500px;
+      height: 400px;
+      border: solid 1px red;
+    }
+    .hul{
+      margin: 0 0 0 20px;
+      margin-top: 20px;
+      list-style: none;
+      width: auto;
+    }
+    .hli{
+      width: 150px;
+      height: 50px;
+      border: solid 1px white;
+      margin-right: 23px;
+      float: left;
+      padding: 0;
+    }
+    .hli:last-child{
+      margin-right: 0px;
+    }
+    .hlione{
+      width: 150px;
+      height: 50px;
+      border: solid 1px white;
+      margin: 0 0 0 173px;
+      padding: 0;
+    }
+    .imgclass{
+      width: 45%;
+      float: left;
+    }
+    #minimg{
+      width: 1200px;
+      height: 55px;
+      margin: 20px 0 20px 0;
+      list-style: none;
+    }
+    .mins{
+      width: 150px;
+      height: 50px;
+      padding: 0;
+      display: inline-block;
+    }
+    .mins:last-child{
+      margin-bottom: 20px;
+    }
+    .textpage{
+      display: block;
+      width: 55%;
+      height: auto;
+      border-left: solid 5px white;
+      float: left;
+    }
+    .pname{
+      margin: 10px 30px 0 30px;
+      color:white;
+      font-size: 60px;
+      border-bottom: solid 5px white;
+    }
+    .smalltext{
+      margin: 20px 30px 0 30px;
+      color: white;
+      border: dashed 3px white;
+      width: auto;
+      height: 150px;
+      padding: 0 0 0 20px;
+    }
+    .att{
+      margin: 20px 30px 0 30px;
+      display: flex;
+      border-top: solid 5px white;
+      padding-top: 20px;
+    }
+    .pnum{
+      color: white;
+      font-size: 100px;
+      font-weight: 900;
+      border: solid 1px white;
+      width: 250px;
+    }
+    .patt{
+      margin-left: 40px;
+      width: 54%;
+    }
+    .price{
+      color: white;
+      font-size: 30px;
+      border-bottom: solid 1px white;
+      margin-top: 10px;
+    }
+    .pcolor{
+      margin-top: 20px;
+      color: white;
+      font-size: 50px;
+      border-bottom: solid 1px white;
+    }
+    .sp{
+      font-size: 20px;
+      margin: 10px 0 5px 0;
+      font-weight: 900;
+    }
+    .coution{
+      color:red;
+      margin-top: 5px;
+    }
+    .cname{
+      font-size: 20px;
+      font-weight: 900;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+  var stext = ['準備中です。','サバストライプを使用して、自然なサバの感じで製作しました。<br>頭足類の立場でおいしそうに見えます。','フグの柄を描きました。ナチュラルなカラー感で、<br>環境に同化されて境界性を削減しました。<br>レッド、ブルー夜光はありません。','グリーンカラーを、一般的な魚の縞に組み合わせました。<br>ナチュラルなカラー感で、<br>環境に同化されて境界性が低くなります。<br>レッド、ブルー夜光はありません。','おいしそうなオレンジを鱗柄に加味して視認性を高めました。<br>目立つカラー感で標的になりやすい。<br>レッド、ブルー夜光はありません。','周辺環境のフルセクを加味して底層の頭足類を攻略します。<br>底層に住む頭足類は境界せずに近づいていきます。<br>レッド、ブルー夜光はありません。','周辺環境のフルセクを加味して底層の頭足類を攻略します。<br>ナチュラルなカラー感で周囲の環境に同化されます。<br>レッド、ブルー夜光はありません。','オレンジ色の緑の色を加味した製品です。<br>目にとまり、アタリが早くおいしそうなカラー感に誘惑します。<br>レッド、ブルー夜光はありません。','赤の色にオレンジ色を加味した製品です。<br>目にとまり、アタリが早くおいしそうなカラー感に誘惑します。<br>レッド、ブルー夜光はありません。','韓国の人気のあるスイカの色のカラーです。<br>人気の理由のある色です。','韓国の人気のコチュジャンの色のカラーです。<br>人気の理由のある色です。','栄養価の高い多くの青魚です。<br>斑点表現により視認性が最大化された。','レッドブラウン背筋に黄色の線をグオトた。<br>黄色のラインのためにアクション時錯視が起こります。','ピンクブラウン背筋に黄色の線をグオトた。<br>黄色のラインのためにアクション時錯視が起こります。','最も一般的な魚の色です。<br>ナチュラルカラーを最高使用しました。','前方はピンク裏側はイエローです。<br>夜光状態も2色で表示されます。','ブルー斑点の色をでした。<br>斑点表現により視認性が最大化された。','ブラック地にうっすらと骨の柄を入れました。<br>夜光時、実際の魚のような効果を示しています。','赤の色にオレンジ色を加味した製品です。<br>目にとまり、アタリが早くおいしそうなカラー感に誘惑します。<br>レッド、ブルー夜光はありません。'];
+  var sname = ['','サバスタイル','フグスペシャル','ナチュラルグリーン','オレンジ鱗','プロブラウン','ナチュラルブラウン','オレンジグリーン','レッドオレンジ','スイカ','コチュジャン','ブルー斑点','レッドブラウン','ピンクブラウン','はタチウオ','トゥフェイス','ピンク斑点','プレミアムブラック','レッドオレンジ'];
+  var coution = "※注意事項：三つの夜光に応じて製品番号が異なります。※";
+  var glowname = ['通常夜光','レッド夜光','ブルー夜光'];
+  var glowtext = ['通常の夜光色です。<br>ほのか緑の色で、既存の姿と同じです。<br>暗い海の中に明るく光ります。','魅惑的なレッド夜光です。<br>赤く明るくなるので、視認性に優れています。<br>柄はそのまま生かしました。','海の中に光を内面青い光がされます。<br>ナチュラルなカラーで最も自然に光ります。<br>境界性が極限に低くなります。'];
+    function minimg(){ //1~6번 이미지 생성
+      for(var i=1; i<7; i++){
+      var min = document.querySelector('#minimg');
+      var minli = document.createElement('li');
+      minli.className = "mins";
+        minli.innerHTML = "<input type='image' src='./img/2_2egi/min/"+i+".png' onclick='clickmin("+i+")'>";
+        min.appendChild(minli);
+      }
+    }
+    function startimg(){ //핸들러 초기화
+      clickmin(1);
+    }
+    function clickmin(num){ //1~7번 이미지 클릭
+      var mainimg = document.querySelector('#mainimg');
+      mainimg.innerHTML = "<img src='./img/2_2egi/max/"+num+".png'>";
+      var pnum = document.querySelector('.pnum');
+      var smalltext = document.querySelector('.smalltext');
+      smalltext.innerHTML = "<p class='cname'>"+stext[0];
+      var pcolor = document.querySelector('.pcolor');
+      pcolor.innerHTML = "STANDARD";
+      if(num < 10){
+        pnum.innerHTML = "B0"+num;
+      }else {
+        pnum.innerHTML = "T"+num;
+      }
+       /* if(num>1 && num<8){
+        var hul = document.querySelector('.hul');
+        hli = document.createElement('li');
+        hli.className = "hlione";
+        hul.innerHTML = "";
+        hli.innerHTML = "<input type='image' src='./img/sutte/min/t"+num+"g.png' onclick='clickmax("+num+",0)'>";
+        hul.appendChild(hli);
+      }else if(num === 18){
+        var hul = document.querySelector('.hul');
+        hli = document.createElement('li');
+        hli.className = "hlione";
+        hul.innerHTML = "";
+        hli.innerHTML = "<input type='image' src='./img/sutte/min/t"+num+"g.png' onclick='clickmax("+num+",0)'>";
+        hul.appendChild(hli);
+      }else{
+      for(var i = 0; i < 3; i++){
+        var hul = document.querySelector('.hul');
+        hli = document.createElement('li');
+        hli.className = "hli";
+        if(i == 0){
+        hul.innerHTML = "";
+        hli.innerHTML = "<input type='image' src='./img/sutte/min/t"+num+"g.png' onclick='clickmax("+num+","+i+")'>";
+        hul.appendChild(hli);
+      }else if (i == 1) {
+        hli.innerHTML = "<input type='image' src='./img/sutte/min/t"+num+"r.png' onclick='clickmax("+num+","+i+")'>";
+        hul.appendChild(hli);
+      }else {
+        hli.innerHTML = "<input type='image' src='./img/sutte/min/t"+num+"b.png' onclick='clickmax("+num+","+i+")'>";
+        hul.appendChild(hli);
+      }
+    }
+  } */
+    }
+    function clickmax(i,num){ //일반, 레드, 블루 야광 클릭
+      var mainimg = document.querySelector('#mainimg');
+      var color = ['g','r','b'];
+      var pcolor = ['','R','B'];
+      var colorname = document.querySelector('.pcolor');
+      var colorset = ['GLOW','RED GLOW','BLUE GLOW'];
+      mainimg.innerHTML = "<img src='./img/sutte/max/t"+i+""+color[num]+".png'>";
+      var pnum = document.querySelector('.pnum');
+      colorname.innerHTML = colorset[num];
+      var hul = document.querySelector('.hul');
+      hul.childNodes[num].innerHTML = "<input type='image' src='./img/sutte/min/t"+i+"s.png' onclick='clickmin("+i+")'>";
+      if(i < 10){
+        pnum.innerHTML = "T0"+i+""+pcolor[num];
+      }else{
+        pnum.innerHTML = "T"+i+""+pcolor[num];
+      }
+      var smalltext = document.querySelector('.smalltext');
+      smalltext.innerHTML = "<p class='sp'>"+glowname[num]+"</p>"+glowtext[num]+"<p class='coution'>"+coution+"</p>";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="logo">
+      <a href="index.html"><img src="logo3.png"></a>
+  </h1>
+  <nav class="topnav">
+  <ul>
+  <li>
+    <a href="index.html">HOME</a>
+    </li>
+    <li class="mainmenu">
+      <a>PRODUCT</a>
+        <ul class="submenu">
+          <li><a href="product.html">SHINONOME</a></li>
+          <li><a href="shinsei.html">SHINSEI</a></li>
+        </ul>
+    </li>
+    <li>
+    <a href="concept.html">CONCEPT</a>
+    </li>
+
+    <li>
+    <a href="about.html">ABOUT US</a>
+    </li>
+    <li>
+    <a href="news.html">NEWS</a>
+  </li>
+  </ul>
+  </nav>
+</div>
+<div class="twobord bord align-center"><h1>PRODUCT</h1></div>
+
+  <div class="container">
+      <div class="handler">
+        <div class="imgclass">
+          <div id="mainimg"></div>
+          <ul class="hul"></ul>
+        </div>
+        <div class="textpage">
+          <div class="pname">1.8 EGI</div>
+          <div class="smalltext">
+          </div>
+          <div class="att">
+            <div class="pnum">T01</div>
+            <div class="patt">
+              <div class="price">販売価格(税別) : ¥770</div>
+              <div class="pcolor"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <ul id="minimg">
+
+    </ul>
+  <div style="background-color: white;">
+    <h2 class="probord">PRODUCT DETAILS</h2>
+  </div>
+
+
+  <div style="width: auto; height: 400px; background-image: url(./img/2_2egi/detail/m1.png); font-family: 'Noto Serif JP', serif;"><div style="padding:  200px 0 0 500px; margin-top: 0px;"><h2 style="font-size:40px;"></div></div>
+  <div style="width: auto; height: 400px; background-image: url(./img/2_2egi/detail/m2.png); font-family: 'Noto Serif JP', serif; color: #999;"><div style="padding:  10px 0 0 700px; margin-top: 0px;"><h2 style="font-size:40px;">NEW STYLE 1.8 EGI
+    </div></div>
+
+  <div style="width: auto; height: 400px; background-image: url(./img/2_2egi/detail/m4.png); color:#FFF; font-family: 'Noto Serif JP', serif; color:#999;"><div style="margin: 0px 0 0 800px; padding: 10px 0 0 50px; font-size:40px;">
+    <p>タコ</p>
+    <p>イイダコ</p>
+    <p>甲イカ</p>
+  </div>
+  </div>
+
+
+
+<div style="width: auto; height: 400px; background-image: url(./img/2_2egi/detail/m5.png);"><div style="margin: 0px 40px 100px 650px; font-family: 'Noto Serif JP', serif; padding:50px 0 0 150px;"><h2 style="color: #999; font-size:35px; margin:0;">
+  <p>SIZE : 60mm</p>
+  <p>WEIGHT : 5g</p>
+  <p></p>
+</div></div>
+
+<div style="width: auto; height: 400px; background-image: url(./img/2_2egi/detail/m6.png);"><div style="margin: 0px 40px 100px 60px; font-family: 'Noto Serif JP', serif; padding:180px 0 0 0px;"><h2 style="color: #999; font-size:165px; margin:0;">水平</div></div>
+
+<div style="width: auto; height: 400px; background-image: url(./img/2_2egi/detail/me.png);"><div style="margin: 0px 40px 100px 650px; font-family: 'Noto Serif JP', serif; padding:180px 0 0 50px;"><h2 style="color: #000000; font-size:35px; margin:0;"></div></div>
+</div>
+</div>
+</div>
+<script>
+minimg();
+startimg();
+</script>
+  </body>
+</html>
